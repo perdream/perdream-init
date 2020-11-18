@@ -16,6 +16,8 @@ jobs:
 
       - name: Use Node.js
         uses: actions/setup-node@v1.4.2
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org
@@ -23,4 +25,5 @@ jobs:
       - name: Publish to NPM
         run: npm publish || true
         env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
           NODE_AUTH_TOKEN: ${{ secrets.PERDREAM_INIT_AUTO_PUBLISH_NPM_SECRET }}
