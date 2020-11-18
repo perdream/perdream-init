@@ -1,0 +1,5 @@
+{
+    "authorize_path":"/user",
+    "baseUrl":"https://api.github.com",
+    "create_repo_url":"/user/repos"
+}
